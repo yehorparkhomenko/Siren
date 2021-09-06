@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "siren"
+version = "0.1.0"
+description = ""
+authors = ["Владимир Лисевич <vovanhikkan@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+fastapi = "^0.63.0"
+uvicorn = "^0.13.4"
+SQLAlchemy = {extras = ["mysql"], version = "^1.4.7"}
+alembic = "^1.5.8"
+
+[tool.poetry.dev-dependencies]
+
+[tool.poetry.scripts]
+start = "src.siren.config.asgi:run"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
